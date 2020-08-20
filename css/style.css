@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
+
+@keyframes gradient {
+    0% {background-position: 0 50%;}
+    10% {background-position: 5 50%;}
+    50% {background-position: 10 55%;}
+    70% {background-position: 80 60%;}
+    80% {background-position: 90 70%;}
+    100% {background-position: 100 100%;}
+  }
+  
+
+* {
+    padding: 10px;
+}
+
+html {
+    background: repeating-radial-gradient(rgb(0, 183, 255), rgb(0, 210, 218), rgb(0, 183, 255), rgb(0, 174, 255),  rgb(0, 81, 255), rgb(0, 89, 255), rgb(16, 24, 141), rgb(16, 24, 141));
+    background-size: 200% 750%;
+    animation: gradient 3.5s ease-in-out alternate infinite;
+    transition: all 0.3s ease 0s;
+}
+
+h1.appTitle {
+    font-family: 'Crimson Text', serif;
+}
+
+.page {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appBox {
+    border: none;
+    border-radius: 10px;
+    background: white;
+    width: 440px;
+    height: 100%;
+}

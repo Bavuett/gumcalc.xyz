@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Gumroad Calculator </title>
+        <link rel="stylesheet" href="css\style.css">
+        <link rel="icon" href="resources\icon.ico">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="white">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.77, user-scalable=no">
+
+    </head>
+    <body>
+        <div class="page">
+            <div class="appBox">
+                <h1 class="appTitle"> Gumroad Calculator. </h1>
+            </div>
+        </div>
+        <script src="js\script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/Gumroad-Calculator/sw.js").then(function(){
+                    console.log("Good news!");
+                    console.log("Service Worker is now registered.");
+                });
+            }
+        </script>
+    </body>
+</html>
