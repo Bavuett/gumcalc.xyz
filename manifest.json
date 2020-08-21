@@ -20,7 +20,7 @@
     "scope": "/Gumroad-Calculator/",	
     "start_url": "/Gumroad-Calculator/",
     "orientation": "portrait",
-    "background_color": "#ff0000",
+    "background_color": "rgb(16, 70, 255)",
     "display": "minimal-ui",
-    "theme_color": "#ff0000"
+    "theme_color": "rgb(16, 70, 255)"
 }
