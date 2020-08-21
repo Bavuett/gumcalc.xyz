@@ -12,11 +12,22 @@
     <body>
         <div class="page">
             <div class="appBox">
-                <h1 class="appTitle"> Gumroad Calculator. </h1>
+                <h5 class="appTitle"> Gumroad Calculator </h5>
+                <p class="black"> Calculate how much you earned with your Gumroad Products. </p>
+                <div class="container">
+                    <div class="accountChooser">
+                        <button class="buttonSelector" id="classicAccount"> Classic Account </button>
+                        <button class="buttonSelector" id="creatorAccount"> Creator Account </button>
+                    </div>
+                </div>
+                <br> <br> <br>
+                <div class="buttons">
+                    <button class="button"> Calculate </button>
+                </div>
             </div>
         </div>
-        <script src="js\script.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js\script.js"></script>
         <script>
             if ("serviceWorker" in navigator) {
                 navigator.serviceWorker.register("/Gumroad-Calculator/sw.js").then(function(){

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 
 @keyframes gradient {
     0% {background-position: 0 50%;}
@@ -12,17 +14,37 @@
 
 * {
     padding: 10px;
+    margin: 0;
+    font-family: "Source Sans Pro", sans-serif;
+}
+
+*::selection {
+    color: white;
+    background-color: rgb(16, 70, 255);
 }
 
 html {
-    background: repeating-radial-gradient(rgb(0, 183, 255), rgb(0, 210, 218), rgb(0, 183, 255), rgb(0, 174, 255),  rgb(0, 81, 255), rgb(0, 89, 255), rgb(16, 24, 141), rgb(16, 24, 141));
-    background-size: 200% 750%;
+    background: repeating-radial-gradient(rgb(0, 185, 255), rgb(0, 185, 255), rgb(0, 175, 255),  rgb(0, 160, 255), rgb(0, 145, 255), rgb(16, 110, 255), rgb(16, 70, 255), rgb(16, 45, 255));
+    background-size: 200% 850%;
     animation: gradient 3.5s ease-in-out alternate infinite;
     transition: all 0.3s ease 0s;
 }
 
-h1.appTitle {
-    font-family: 'Crimson Text', serif;
+h5.appTitle {
+    padding: 10px;
+    color: black;
+    font-size: 34px;
+    font-weight: 1000;
+    text-transform: uppercase;
+    cursor: default;
+}
+
+p.black {
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+    font-family: "Source Sans Pro", sans-serif;
+    cursor: default;
 }
 
 .page {
@@ -36,6 +58,124 @@ h1.appTitle {
     border: none;
     border-radius: 10px;
     background: white;
+    color: white;
     width: 440px;
     height: 100%;
+    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.212);
+    transition: all 0.3s ease 0s;
+}
+
+.appBox:hover {
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.37);  
+    transform: translateY(-3px)
+}
+
+.container {
+    align-items: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+  
+.buttons {
+    align-items: center;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 10px;
+}
+
+.button {
+    width: 95%;
+    height: 50px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: white;
+    background-color: #000;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgb(233, 220, 220);
+    box-shadow: 0px 15px 20px rgba(49, 48, 48, 0.75);  
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.button:focus {
+    box-shadow: 0 0 0 2pt rgba(29, 29, 29, 0.650);
+    outline: 0;
+}
+
+.accountChooser {
+    border: none;   
+    border-radius: 30px;
+    width: 95%;
+    height: 40px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: black;
+    background-color: rgb(230, 230, 230);
+    transition: all 0.3s ease 0s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.accountChooser:hover {
+    transform: translateY(-0.5px);
+    box-shadow: 0px 15px 20px rgba(49, 48, 48, 0.315);
+}
+
+.buttonSelector {
+    width: 40%;
+    height: 45px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 900;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.buttonSelector:hover {
+    transition: all 0.3s ease 0s;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.39);
+    transform: translateY(-0.5px);
+}
+
+.buttonSelector.active {
+    color: white;
+    background-color: rgb(0, 160, 199);
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.425);
+    transition: all 0.3s ease 0s;
+}
+
+.buttonSelector.active:hover {
+    background-color: rgb(0, 140, 199);
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.45);
+    transition: all 0.3s ease 0s;
+    transform: translateY(-0.5px);
+}
+
+.buttonSelector:focus {
+    outline: 0;
 }
