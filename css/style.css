@@ -56,10 +56,10 @@ p.black {
 
 .appBox {
     border: none;
-    border-radius: 10px;
+    border-radius: 22.5px;
     background: white;
     color: white;
-    width: 440px;
+    width: 445px;
     height: 100%;
     box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.212);
     transition: all 0.3s ease 0s;
