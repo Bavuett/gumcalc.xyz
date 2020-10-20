@@ -19,3 +19,9 @@ $("#creatorAccount").click(function(){
     $("#classicAccount").removeClass("active");
     $("#creatorAccount").addClass("active");
  });
+
+$(".buttonDonate").hover(function(){
+   $(".aButton").addClass("hover");
+}, function(){
+   $(".aButton").removeClass("hover");
+});
