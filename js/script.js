@@ -37,4 +37,10 @@ $(".checkbox__input").click(function(){
    }
 });
 
+$("#calculate").click(function(){
+   $(".amountBox").removeClass("notshowing");
+});
 
+$("#close").click(function(){
+   $(".amountBox").addClass("notshowing");
+});
