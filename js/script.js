@@ -20,8 +20,21 @@ $("#creatorAccount").click(function(){
     $("#creatorAccount").addClass("active");
  });
 
+// Making the Donation Button look decent with a script.
 $(".buttonDonate").hover(function(){
    $(".aButton").addClass("hover");
 }, function(){
    $(".aButton").removeClass("hover");
 });
+
+// When the Checkbox is checkes, the script checks the state.
+// If it is checked, sets the value to 1. If it is not, sets the value to 0.
+$(".checkbox__input").click(function(){
+   if($(".checkbox__input").is(":checked")) {
+      sessionStorage.setItem("isGumroadDiscover", "1");
+   } else {
+      sessionStorage.setItem("isGumroadDiscover", "0");
+   }
+});
+
+

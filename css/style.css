@@ -67,7 +67,7 @@ p.blackCheckbox {
     border-radius: 22.5px;
     background: white;
     color: white;
-    width: 460px;
+    width: 465px;
     height: 100%;
     box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.212);
     transition: all 0.3s ease 0s;
@@ -240,11 +240,15 @@ p.blackCheckbox {
     border-left: solid transparent;
     border-radius: 25px;
     background-color: rgba(0, 0, 0, 0.13);
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0);
+    transition: all 0.5s;
   }
 
   .form:focus {
     box-shadow: 0 0 0 2pt rgba(29, 29, 29, 0.616);
     outline: 0;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.068);
+    transition: all 0.5s;
   }
 
 hr {
@@ -267,6 +271,7 @@ hr {
   
   .checkbox:hover .checkbox__check {
     background: #0040ff;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.164);
   }
   
   .checkbox__input {
@@ -278,10 +283,12 @@ hr {
   .checkbox__input:checked + .checkbox__check {
     background: #3366ff;
     stroke-dashoffset: 0;
+    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.767);
+    transition: all 0.9s;
   }
   
   .checkbox__check {
-    border: 0.2rem solid #3366ff;
+    border: 0.2rem solid #0040ff;
     background: white;
     stroke: #f9f9f9;
     stroke-dasharray: 25;
@@ -298,8 +305,16 @@ hr {
 
 label.checkbox {
     color: black;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-bottom: -30px;
+    transition: all 0.5s;
 }
+
+label.checkbox:hover {
+    transform: translateY(-2px);
+    transition: all 0.5s;
+}
+
+
   
   
