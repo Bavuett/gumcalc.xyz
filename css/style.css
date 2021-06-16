@@ -1,355 +1,193 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico');
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-
-
-@keyframes gradient {
-    0% {background-position: 0 50%;}
-    10% {background-position: 5 50%;}
-    50% {background-position: 10 55%;}
-    70% {background-position: 80 60%;}
-    80% {background-position: 90 70%;}
-    100% {background-position: 100 100%;}
-  }
-  
-
 * {
-    padding: 10px;
+    box-sizing: border-box;
     margin: 0;
-    font-family: "Source Sans Pro", sans-serif;
-}
-
-*::selection {
-    color: white;
-    background-color: rgb(16, 70, 255);
+    padding: 0;
+    outline: none;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 html {
-    background: repeating-radial-gradient(rgb(0, 185, 255), rgb(0, 185, 255), rgb(0, 175, 255),  rgb(0, 160, 255), rgb(0, 145, 255), rgb(16, 110, 255), rgb(16, 70, 255), rgb(16, 45, 255));
-    background-size: 200% 850%;
-    animation: gradient 3.5s ease-in-out alternate infinite;
-    transition: all 0.3s ease 0s;
+    background-color: rgb(0, 10, 37); /* Alternative: #1A1A1A */
+    padding-left: 5%;
+    padding-right: 5%; 
+    scroll-behavior: smooth; 
 }
 
-h5.appTitle {
-    padding: 10px;
-    color: black;
-    font-size: 34px;
-    font-weight: 1000;
-    text-transform: uppercase;
-    cursor: default;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "inter", sans-serif;
+    color: white;
 }
 
-p.black {
-    color: black;
-    font-size: 24px;
-    font-weight: 800;
-    font-family: "Source Sans Pro", sans-serif;
-    cursor: default;
-}
-
-p.blackCheckbox {
-    color: black;
-    font-size: 20px;
-    font-weight: 800;
-    font-family: "Source Sans Pro", sans-serif;
-    cursor: pointer;
-}
-
-.page {
-    padding: 10px;
+h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    font-size: 70px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    cursor: default; 
 }
 
-.appBox {
-    border: none;
-    border-radius: 22.5px;
-    background: white;
-    color: white;
-    width: 465px;
-    height: 100%;
-    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.212);
-    transition: all 0.3s ease 0s;
-}
-
-.appBox:hover {
-    transition: all 0.3s ease 0s;
-    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.37);  
-    transform: translateY(-3px)
-}
-
-.container {
-    align-items: center;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-}
-  
-.buttons {
-    align-items: center;
-    padding: 1px;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 10px;
-}
-
-.button {
-    width: 95%;
-    height: 50px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: white;
-    background-color: #000;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: rgb(233, 220, 220);
-    box-shadow: 0px 15px 20px rgba(49, 48, 48, 0.75);  
-    color: #000;
-    transform: translateY(-3px);
-}
-
-.button:focus {
-    box-shadow: 0 0 0 2pt rgba(29, 29, 29, 0.650);
-    outline: 0;
-}
-
-.accountChooser {
-    border: none;   
-    border-radius: 30px;
-    width: 95%;
-    height: 40px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: black;
-    background-color: rgb(230, 230, 230);
-    transition: all 0.3s ease 0s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.accountChooser:hover {
-    transform: translateY(-0.5px);
-    box-shadow: 0px 15px 20px rgba(49, 48, 48, 0.315);
-}
-
-.buttonSelector {
-    width: 40%;
-    height: 45px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: black;
-    background-color: transparent;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    margin-right: 5px;
-    margin-left: 5px;
-}
-
-.buttonSelector:hover {
-    transition: all 0.3s ease 0s;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.39);
-    transform: translateY(-0.5px);
-}
-
-.buttonSelector.active {
-    color: white;
-    background-color: rgb(0, 160, 199);
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.425);
-    transition: all 0.3s ease 0s;
-}
-
-.buttonSelector.active:hover {
-    background-color: rgb(0, 140, 199);
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.45);
-    transition: all 0.3s ease 0s;
-    transform: translateY(-0.5px);
-}
-
-.buttonSelector:focus {
-    outline: 0;
-}
-
-.aButton {
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.aButton.hover {
-    color: black;
-    text-decoration: none;
-    transition: all 0.3s ease 0s;
-}
-
-.buttonDonate {
-    margin-right: 20px;
-    width: 300px;
-    height: 50px;
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 900;
-    color: white;
-    background-color: #000;
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-}
-
-.buttonDonate:hover {
-    background-color: rgb(233, 220, 220);
-    box-shadow: 0px 15px 20px rgba(49, 48, 48, 0.75);  
-    color: #000;
-    transform: translateY(-3px);
-}
-
-.buttonDonate:focus {
-    box-shadow: 0 0 0 2pt rgba(29, 29, 29, 0.650);
-    outline: 0;
-}
-
-
-.form {
-    margin-right: 20px;
-    width: 92%;
-    height: 29px;
-    border-bottom: solid 2px black;
-    border-top: solid transparent;
-    border-right: solid transparent;
-    border-left: solid transparent;
-    border-radius: 25px;
-    background-color: rgba(0, 0, 0, 0.13);
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0);
-    transition: all 0.5s;
-  }
-
-  .form:focus {
-    box-shadow: 0 0 0 2pt rgba(29, 29, 29, 0.616);
-    outline: 0;
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.068);
-    transition: all 0.5s;
-  }
-
-hr {
-    width: 80%;
-    border-top: rgba(0, 0, 0, 0.575) solid 2px;
-    border-bottom: none;
-    border-right: none;
-    border-left: none;
-    margin-bottom: -10px;
-    border-radius: 2px;
-}
-
-.checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    cursor: pointer;
-  }
-  
-  .checkbox:hover .checkbox__check {
-    background: #0040ff;
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.164);
-  }
-  
-  .checkbox__input {
-    width: 0;
-    height: 0;
-    opacity: 0;
-  }
-  
-  .checkbox__input:checked + .checkbox__check {
-    background: #3366ff;
-    stroke-dashoffset: 0;
-    box-shadow: inset 0px 8px 15px rgba(0, 0, 0, 0.767);
-    transition: all 0.9s;
-  }
-  
-  .checkbox__check {
-    border: 0.2rem solid #0040ff;
-    background: white;
-    stroke: #f9f9f9;
-    stroke-dasharray: 25;
-    stroke-dashoffset: 25;
-    stroke-linecap: round;
-    stroke-width: 0.2rem;
-  
-    border-radius: 0.85rem;
-  
-    fill: none;
-  
-    transition: background 0.4s, stroke-dashoffset 0.6s;
-  }
-
-label.checkbox {
-    color: black;
-    margin-top: 25px;
-    margin-bottom: -30px;
-    transition: all 0.5s;
-}
-
-label.checkbox:hover {
-    transform: translateY(-2px);
-    transition: all 0.5s;
-}
-
-.amountBox {
-    border: none;
-    border-radius: 15px;
-    background-color: white;
-    bottom: 10px;
-    width: 85%;
-    position: fixed;
-    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.425);
-    transition: all 0.8s ease 0s;
-}
-
-.amountBox:hover {
-    border: none;
-    border-radius: 15px;
-    background-color: white;
-    bottom: 10px;
-    width: 85%;
-    position: fixed;
-    transform: translateY(-2px);
-    box-shadow: 0px 15px 20px rgba(2, 2, 2, 0.37); 
-    transition: all 0.3s ease 0s;
-}
-
-.amountBox.notshowing {
-    transform: translateY(110%);
-    transition: all 0.8s ease 0s;
-}
-
-p.description.notifs {
-    color: black;
+h1.title {
     font-size: 22px;
-    font-weight: 300;
-    font-family: "Source Sans Pro", sans-serif;
-    cursor: default;
-    margin-top: -19.5px;
 }
-  
-  
+
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 19px;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #b4b4b4;
+    font-size: 14px;
+    cursor: default;
+}
+
+nav.main {
+    padding-left: 5%;
+    padding-right: 5%;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow .3s ease;
+    z-index: 5;
+    user-select: none;
+    background-color: rgb(0, 10, 37);
+    border-bottom: solid 0.1px rgb(4, 0, 59);
+    box-shadow: 0 0 30px 10px rgba(10, 10, 10, 0.404);
+}
+
+nav.scrolled {
+    box-shadow: 0 0 30px 10px rgb(10, 10, 10);
+}
+
+nav.main div.pageLinks ul li {
+    float: left;
+}
+
+nav.main .page-links ul li:not(:last-child) {
+    margin-right: 30px;
+}
+
+nav.main .page-links ul li a {
+    position: relative;
+    display: inline-block;
+}
+
+header.content {
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 0%;
+    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: visible;
+    z-index: 1;
+    transition: all 0.8s ease 0s;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    width: 160px;
+    height: 50px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    font: 16px/1 "inter", sans-serif;
+    transition: all 0.3s ease 0.1s;
+    background:rgb(70, 70, 70);
+    color: white;
+}
+
+button:hover {
+    background: #2c2c2c;
+    transition: all 0.3s ease 0.1s;
+}
+
+button:active {
+    transform: scale(0.90);
+    transition: all 0.3s, ease 0.1s;
+}
+
+button.first {
+    background: white;
+    color: black;
+    transition: all 0.3s ease 0.1s;
+    
+}
+
+button.first:hover {
+    transition: all 0.3s ease 0.1s;
+    background: rgb(170, 170, 170);
+}
+
+button.menu-button {
+    display: none;
+    background: black;
+}
+
+div.title-nav {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+span.price-span {
+    color: white;
+    text-decoration: underline;
+}
+
+form {
+    width: 100%;
+    height: 45%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+input {
+    width: 35%;
+    height: 45px;
+    border: solid 2px rgb(100, 100, 100);
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1.5%;
+    transition: all 0.3s ease 0s;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease 0s;
+}
+
+@media screen and (max-width: 900px) {
+    form {
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+
+    input {
+        width: 100%;
+        padding-left: 5%;
+    }
+}

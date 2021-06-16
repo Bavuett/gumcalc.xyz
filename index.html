@@ -1,69 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <title> Gumroad Calculator, by @DevLBD. | ALPHA. </title>
-        <link rel="stylesheet" href="css\style.css">
-        <link rel="icon" href="resources\icon.ico">
-        <link rel="manifest" href="manifest.json">
-        <meta name="theme-color" content="#1046ff">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.77, user-scalable=no">
-
+        <title> Gumroad Calculator </title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="theme-color" content="black">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.90, user-scalable=no">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="page">
-            <div class="appBox">
-                <h5 class="appTitle"> Gumroad Calculator </h5>
-                <p class="black"> Calculate how much you earned with your Gumroad Products. </p>
-                <div class="container">
-                    <div class="accountChooser">
-                        <button class="buttonSelector" id="classicAccount"> Classic Account </button>
-                        <button class="buttonSelector" id="creatorAccount"> Creator Account </button>
-                    </div>
-                </div>
-                <label class="checkbox">
-                    <input class="checkbox__input" type="checkbox">
-                    <svg class="checkbox__check" width="24" height="24">
-                      <polyline points="20 6 9 17 4 12"></polyline>
-                    </svg>
-                    <p class="blackCheckbox">Brought by Gumroad Discover?</p>
-                </label>
-                <br> <br> <br>
-                <div class="">
-                    <form name="amountEarned">
-                        <input class="form" autocomplete="off" placeholder="What amount did you earn?"></input>
-                    </form>
-                </div>
-                <div class="buttons">
-                    <hr></hr>
-                </div>
-                <div class="buttons">
-                    <button class="button" id="calculate"> Calculate </button>
-                </div>
+        <nav class="main">
+            <div class="title-nav">
+                <h1 class="title">Gumroad Calculator</h1>
             </div>
-        </div>
-        <br>
-        <div class="buttons">
-            <a class="aButton" href="https://gum.co/tGDnt"><button class="buttonDonate"> Donate on Gumroad! </a>
-        </div>
-        <div class="buttons">
-            <div class="amountBox notshowing">
-                <p class="black"> Here's what you earned. </p>
-                <p class="description notifs">Value here</p>
-                <div class="container">
-                    <button class="button" id="close"> Close </button>
-                </div>
-            </div>
-        </div>
-        <script src="https://gumroad.com/js/gumroad.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="js\script.js"></script>
-        <script>
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("/Gumroad-Calculator/sw.js").then(function(){
-                    console.log("Good news!");
-                    console.log("Service Worker is now registered.");
-                });
-            }
-        </script>
+        </nav>
+        <header class="content">
+            <h3>How much are you going to earn from your product?</h3>
+            <p>Inside the box, type the amount your customer is going to pay for the product. <br> Fill the boxes as needed. <span class="price-span">The price must be in USD ($).</span></p>
+            <form>
+                <input type="text" name="price" class="price-input" placeholder="How much is your customer going to pay?" autocomplete="off"> 
+            </form>
+        </header>
     </body>
 </html>
