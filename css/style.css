@@ -94,7 +94,7 @@ nav.main .page-links ul li a {
 header.content {
     padding-left: 5%;
     padding-right: 5%;
-    margin-top: 0%;
+    padding-top: 5%;
     min-height: 80vh;
     height: 100%;
     display: flex;
@@ -130,6 +130,14 @@ button:active {
     transition: all 0.3s, ease 0.1s;
 }
 
+button.form-confirm {
+    background: black;
+    width: 35%;
+    height: 45px;
+    border: solid 2px rgb(53, 53, 53);
+    border-radius: 15px;
+}
+
 button.first {
     background: white;
     color: black;
@@ -153,6 +161,10 @@ div.title-nav {
     padding-right: 5%;
 }
 
+div.form-space {
+    padding: 0.8%;
+}
+
 span.price-span {
     color: white;
     text-decoration: underline;
@@ -162,7 +174,38 @@ form {
     width: 100%;
     height: 45%;
     padding-top: 3%;
-    padding-bottom: 3%;
+    padding-bottom: 0%;
+    display: flex;
+    flex-direction: row;
+}
+
+form#second {
+    padding-top: 1%;
+}
+
+select {
+    width: 35%;
+    height: 45px;
+    border: solid 2px rgb(100, 100, 100);
+    border-radius: 15px;
+    font-family: 'Inter', sans-serif;
+    padding-left: 1.5%;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+select:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+    transition: all 0.3s ease 0s;
+}
+
+select:active {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease 0s;
+}
+
+option#notvalid {
+    display: none;
 }
 
 input {
@@ -172,22 +215,50 @@ input {
     border-radius: 15px;
     font-family: 'Inter', sans-serif;
     padding-left: 1.5%;
+    transition: all 0.3s ease 0s;   
+}
+
+input::placeholder {
+    color: black;
+}
+
+input:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease 0s;
+}
+
+input:active{
+    background-color: rgba(255, 255, 255, 0.85);
     transition: all 0.3s ease 0s;
 }
 
 input:focus {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     transition: all 0.3s ease 0s;
 }
 
 @media screen and (max-width: 900px) {
     form {
         padding-top: 10%;
-        padding-bottom: 10%;
+        padding-bottom: 3%;
+        flex-direction: column;
     }
 
     input {
         width: 100%;
         padding-left: 5%;
+    }
+
+    select {
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    div.form-space {
+        padding: 2%;
+    }
+
+    button.form-confirm {
+        width: 100%;
     }
 }
