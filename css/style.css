@@ -1,3 +1,51 @@
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    } 
+
+    10% {
+        transform: scale(0.85);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.85);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%);
+    }
+
+    25% {
+        transform: translateX(3%);
+    }
+
+    50% {
+        transform: translateX(-3%);
+    }
+
+    75% {
+        transform: translateX(3%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -17,7 +65,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: "inter", sans-serif;
     color: white;
-    cursor: default;
+    cursor: default;    
 }
 
 h1 {
@@ -29,7 +77,6 @@ h1 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     font-weight: bold;
-    cursor: default; 
 }
 
 h1.title {
@@ -57,6 +104,13 @@ h3.price-result {
     text-decoration-thickness: 5px;
     text-decoration-color: rgba(255, 255, 255, 0.1);
     cursor: default;
+    transition: all 0.6s ease 0s;
+}
+
+h3.price-result.closed {
+    opacity: 0;
+    margin-top: 10%;
+    transition: all 0.6s ease 0s;
 }
 
 p {
@@ -76,6 +130,28 @@ p.explanation.closed {
     transition: all 0.6s ease 0s;
 }
 
+p.footer {
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-size: 18px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+a.back-to-top {
+    text-decoration: none;
+    color: white;
+}
+
 nav.main {
     padding-left: 5%;
     padding-right: 5%;
@@ -92,7 +168,7 @@ nav.main {
     user-select: none;
     background-color: rgb(0, 10, 37);
     border-bottom: solid 0.1px rgb(4, 0, 59);
-    box-shadow: 0 0 30px 10px rgba(10, 10, 10, 0.404);
+    box-shadow: 0 0 30px 10px rgba(10, 10, 10, 0.10);
 }
 
 nav.scrolled {
@@ -115,7 +191,7 @@ nav.main .page-links ul li a {
 header.content {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 15%;
+    padding-top: 12%;
     min-height: 80vh;
     height: 100%;
     display: flex;
@@ -125,6 +201,7 @@ header.content {
     overflow: visible;
     z-index: 1;
     transition: all 0.8s ease 0s;
+    border-bottom: solid 0.1px rgba(255, 255, 255, 0.035);
 }
 
 button {
@@ -165,16 +242,37 @@ button.form-confirm:hover {
     transition: all 0.3s ease 0.1s;
 }
 
-button.first {
-    background: white;
+button.form-confirm.error {
+    animation: shake 0.5s ease 0s infinite;
+}
+
+button.coffee {
+    width: 175px;
+    height: 50px;
+    background: url(https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg);
+    background-size: cover;
     color: black;
     transition: all 0.3s ease 0.1s;
     
 }
 
-button.first:hover {
-    transition: all 0.3s ease 0.1s;
-    background: rgb(170, 170, 170);
+button.coffee:hover {
+    transition: all 0.3s ease 0s;
+    opacity: 0.8;
+}
+
+button.coffee-mobile {
+    display: none;
+    width: 50px;
+    height: 50px;
+    background: url(https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg);
+    color: black;
+    transition: all 0.3s ease 0s;
+}
+
+button.coffee-mobile:hover  {
+    opacity: 0.8;
+    transition: all 0.3s ease 0s;
 }
 
 button.menu-button {
@@ -182,19 +280,50 @@ button.menu-button {
     background: black;
 }
 
+div.title-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.result-section {
+    transition: all 0.3s ease 0s;
+}
+
+div.result-section.showing-result {
+    padding-bottom: 8%;
+    transition: all 0.3s ease 0s;
+}
+
 div.div-line {
     margin-top: 3%;
     margin-bottom: 2%;
     width: 71.5%;
-    height: 0.5px;
-    border: solid 2px rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    background: rgba(255, 255, 255, 0);
+    height: 1%;
+    border: solid 5px rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 span.price-span {
     color: white;
     text-decoration: underline;
+}
+
+span.heart {
+    display: inline-block;
+    animation: pulse 2.8s ease infinite;
+}
+
+span.north {
+    transform: translateY(10%);
+    transition: all 0.3s ease 0s;
+}
+
+span.north.moveUp {
+    transform: translateY(-10%);
+    transition: all 0.3s ease 0s;
 }
 
 form {
@@ -221,14 +350,10 @@ select {
     transition: all 0.3s ease 0s;
 }
 
-select:hover {
-    background-color: rgba(255, 255, 255, 0.85);
-    transition: all 0.3s ease 0s;
-}
-
-select:active {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease 0s;
+select.error {
+    border: solid 2px red;
+    background-color: rgb(80, 0, 0);
+    color: white;
 }
 
 option#notvalid {
@@ -245,28 +370,45 @@ input {
     transition: all 0.3s ease 0s;   
 }
 
+input.error {
+    border: solid 2px red;
+    background-color: rgb(80, 0, 0);
+    color: white;
+}
+
+input.error::placeholder {
+    color: white;
+}
+
 input::placeholder {
     color: black;
 }
 
-input:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease 0s;
-}
-
-input:active{
-    background-color: rgba(255, 255, 255, 0.85);
-    transition: all 0.3s ease 0s;
-}
-
-input:focus {
-    background-color: rgba(255, 255, 255, 0.7);
-    transition: all 0.3s ease 0s;
+footer.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: -5%;
+    justify-content: space-between;
 }
 
 @media screen and (max-width: 900px) {
+    header.content {
+        padding-top: 30%;
+    }
+
     h2.loading-h2 {
         font-size: 28px;
+    }
+
+    button.coffee-mobile {
+        display: block;
+    }
+
+    button.coffee {
+        display: none;
     }
 
     form {
@@ -295,9 +437,42 @@ input:focus {
 
     div.div-line {
         width: 100%;
+        border-radius: 50px;
+    }
+
+    button.first {
+        display: none;
     }
 
     button.form-confirm {
         width: 100%;
+    }
+
+    footer.footer-bottom {
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 10%;
+    }
+}
+
+@media (min-width: 900px) {
+    ::-webkit-scrollbar {
+        width: 10px;
+        padding: 1%;    
+    }
+      
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+      
+    ::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.1);
+        border: solid 5px rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+    }
+      
+      /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.05);
     }
 }
