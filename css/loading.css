@@ -1,0 +1,58 @@
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg); 
+    }
+    
+    100% { 
+        transform: rotate(360deg); 
+    }
+}
+
+div.glass {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    margin-left: -5%;
+    background-color: rgba(0, 10, 37, 0.85);
+    z-index: 10;
+    transition: all 0.8s ease 0s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+div.glass.closed {
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.8s ease 0s;
+}
+
+div.text-loading {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+div.animation-loading {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid rgb(0, 39, 148);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s ease 0.8s infinite;
+}
+
+div.animation-loading.stopped {
+    animation: spin 1s ease 0.8s 0;
+}
+
+div.title-nav {
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.form-space {
+    padding: 0.8%;
+}

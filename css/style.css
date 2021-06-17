@@ -17,6 +17,7 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: "inter", sans-serif;
     color: white;
+    cursor: default;
 }
 
 h1 {
@@ -48,11 +49,31 @@ h3 {
     margin-inline-end: 0px;
 }
 
+h3.price-result {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.897);
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-thickness: 5px;
+    text-decoration-color: rgba(255, 255, 255, 0.1);
+    cursor: default;
+}
+
 p {
     font-family: 'IBM Plex Mono', monospace;
     color: #b4b4b4;
     font-size: 14px;
     cursor: default;
+}
+
+p.explanation {
+    transition: all 0.6s ease 0s;
+}
+
+p.explanation.closed {
+    opacity: 0;
+    margin-top: -8%;
+    transition: all 0.6s ease 0s;
 }
 
 nav.main {
@@ -94,7 +115,7 @@ nav.main .page-links ul li a {
 header.content {
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 5%;
+    padding-top: 15%;
     min-height: 80vh;
     height: 100%;
     display: flex;
@@ -131,11 +152,17 @@ button:active {
 }
 
 button.form-confirm {
-    background: black;
+    background: rgb(0, 4, 15);
     width: 35%;
     height: 45px;
     border: solid 2px rgb(53, 53, 53);
     border-radius: 15px;
+    transition: all 0.3s ease 0.1s;
+}
+
+button.form-confirm:hover {
+    background: black;
+    transition: all 0.3s ease 0.1s;
 }
 
 button.first {
@@ -155,14 +182,14 @@ button.menu-button {
     background: black;
 }
 
-div.title-nav {
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-div.form-space {
-    padding: 0.8%;
+div.div-line {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 71.5%;
+    height: 0.5px;
+    border: solid 2px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0);
 }
 
 span.price-span {
@@ -238,6 +265,10 @@ input:focus {
 }
 
 @media screen and (max-width: 900px) {
+    h2.loading-h2 {
+        font-size: 28px;
+    }
+
     form {
         padding-top: 10%;
         padding-bottom: 3%;
@@ -254,8 +285,16 @@ input:focus {
         padding-left: 5%;
     }
 
+    p.explanation.closed {
+        margin-top: -17%;
+    }
+
     div.form-space {
         padding: 2%;
+    }
+
+    div.div-line {
+        width: 100%;
     }
 
     button.form-confirm {

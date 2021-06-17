@@ -2,6 +2,7 @@
 <html>
     <head>
         <title> Gumroad Calculator </title>
+        <link rel="stylesheet" href="css/loading.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="theme-color" content="black">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.90, user-scalable=no">
@@ -11,6 +12,14 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
+        <div class="glass">
+            <div class="text-loading">
+                <h2 align="center" class="loading-h2">Gumroad Calculator</h2>
+                <p align="center" class="loading-p">Created by Lorenzo Barretta.</p>
+            </div>
+            <div class="form-space"></div>
+            <div class="animation-loading"></div>
+        </div>
         <nav class="main">
             <div class="title-nav">
                 <h1 class="title">Gumroad Calculator</h1>
@@ -20,7 +29,7 @@
             <h3>How much are you going to earn from your product?</h3>
             <p>Inside the box, type the amount your customer is going to pay for the product. <br> Fill the boxes as needed. <span class="price-span">The price must be in USD ($).</span></p>
             <form>
-                <input type="number" id="price" name="price" class="price-input" placeholder="How much is your customer going to pay?" autocomplete="off"> 
+                <input type="number" id="price" name="price" class="price-input" min="1" placeholder="How much is your customer going to pay?" autocomplete="off"> 
                 <div class="form-space"></div>
                 <select id="account-type" name="account-type" class="account-type-selector">
                     <option value="0" id="notvalid">Which kind of account have you got?</option>
@@ -35,8 +44,16 @@
                     <option value="notdiscover">No, my customer didn't came from Discover</option>
                 </select>
                 <div class="form-space"></div>
-                <button class="form-confirm">Calculate</button>
+                <button type="button" class="form-confirm">Calculate</button>
             </form>
+            <div class="div-line"></div>
+            <div class="result-section">
+                <h3>Here's what you're going to earn.</h3>
+                <p class="explanation">Once you're done, the price'll show up here. <span class="price-span">Give it a try!</span></p>
+                <h3 class="price-result">$210.00</h3>
+            </div>
         </header>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
