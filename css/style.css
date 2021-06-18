@@ -204,30 +204,6 @@ header.content {
     border-bottom: solid 0.1px rgba(255, 255, 255, 0.035);
 }
 
-button {
-    border: none;
-    border-radius: 12px;
-    width: 160px;
-    height: 50px;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-    font: 16px/1 "inter", sans-serif;
-    transition: all 0.3s ease 0.1s;
-    background:rgb(70, 70, 70);
-    color: white;
-}
-
-button:hover {
-    background: #2c2c2c;
-    transition: all 0.3s ease 0.1s;
-}
-
-button:active {
-    transform: scale(0.90);
-    transition: all 0.3s, ease 0.1s;
-}
-
 button.form-confirm {
     background: rgb(0, 4, 15);
     width: 35%;
@@ -348,6 +324,7 @@ select {
     padding-left: 1.5%;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    background: white;
 }
 
 select.error {

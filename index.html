@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title> Gumroad Calculator </title>
+        <title> Gumroad Calculator by @DevLBD. </title>
+        <link rel="preload" href="js/jquery.js" as="script">
+        <link rel="preload" href="js/loading.js" as="script">
+        <link rel="preload" href="css/loading.css" as="style">
         <link rel="stylesheet" href="css/loading.css">
         <link rel="stylesheet" href="css/style.css">
         <meta name="theme-color" content="rgb(0, 10, 37)">
@@ -19,6 +22,17 @@
             </div>
             <div class="form-space"></div>
             <div class="animation-loading"></div>
+            <div class="form-space"></div>
+            <div class="offline-notification closed">
+                <h3>The page is taking too much time to load.</h3>
+                <p>Please check your connection. <br> If you want, you can continue to use the web app or reload the page.</p>
+                <div class="form-space"></div>
+                <div class="group-buttons">
+                    <button class="offline reload">Reload</button>
+                    <div class="buttons-space"></div>
+                    <button class="offline continue">Continue Anywas</button>
+                </div>
+            </div>
         </div>
         <nav class="main">
             <div class="title-nav">
@@ -69,7 +83,7 @@
                 <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a></p>
             </div>
         </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/jquery.js"></script>
         <script src="js/loading.js"></script>
         <script src="js/script.js"></script>
     </body>

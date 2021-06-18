@@ -42,13 +42,3 @@ self.addEventListener("activate", function(event){
         })
     );
 });
-
-if (navigator.share) {
-    navigator.share({
-      title: "Gumroad Calculator.",
-      text: "To be changed.",
-      url: "https://devlbd.github.io/Gumroad-Calculator",
-    })
-      .then(() => console.log('Successful share'))
-      .catch((error) => console.log('Error sharing', error));
-  }

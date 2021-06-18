@@ -1,3 +1,4 @@
+// Main script.
 var isEverythingCorrect = 0;
 var percentage = 0;
 var subPrice = 0;
@@ -48,7 +49,7 @@ $("button.form-confirm").click(function(){
       $(".result-section").removeClass("showing-result");
       $(".explanation").removeClass("closed");
       $(".intro-explanation").text("Whoops!");
-      $(".explanation").text("Something is wrong. The errors have been highlighted in red.");
+      $(".explanation").text("Something went wrong. The errors have been highlighted in red.");
       
       if (price < 1) {
          $("#price").addClass("error");
@@ -68,6 +69,8 @@ $("button.form-confirm").click(function(){
    }
 });
 
+
+// Back to top arrow animation.
 $("document").ready(function(){
    $("a.back-to-top").hover(function(){
        $(".north").addClass("moveUp");
@@ -76,6 +79,7 @@ $("document").ready(function(){
    });
 });
 
+// Nav bar animation on scroll.
 window.addEventListener("scroll", function(){
    if(window.scrollY==0){
      $("nav").removeClass("scrolled");
