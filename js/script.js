@@ -93,16 +93,22 @@ window.addEventListener('beforeinstallprompt', (e) => {
   $(".install").addClass("active");
 });
 
-$(".install").click(function() {
-   // Show the install prompt
-   deferredPrompt.prompt();
-   // Wait for the user to respond to the prompt
-   const { outcome } = await deferredPrompt.userChoice;
-   console.log(`User response to the install prompt: ${outcome}`);
-   deferredPrompt = null;
-   $(".install").removeClass("active");
+var buttonInstall = document.getElementsByClassName("install");
+
+buttonInstall.addEventListener('click', async () => {
+  // Show the install prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  const { outcome } = await deferredPrompt.userChoice;
+  // We've used the prompt, and can't use it again, throw it away
+  deferredPrompt = null;
+  // Hide the app provided install promotion
+  $(".install").removeClass("active");
 });
 
 window.addEventListener('appinstalled', () => {
+   // Hide the app-provided install promotion
    $(".install").removeClass("active");
-});
+   // Clear the deferredPrompt so it can be garbage collected
+   deferredPrompt = null;
+ });
