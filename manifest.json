@@ -17,10 +17,10 @@
             "purpose": "maskable any"
         }
     ],
-    "scope": "/Gumroad-Calculator/",	
-    "start_url": "/Gumroad-Calculator/",
+    "scope": "https://devlbd.github.io/Gumroad-Calculator/",	
+    "start_url": "https://devlbd.github.io/Gumroad-Calculator/",
     "orientation": "portrait",
-    "background_color": "#1046ff",
+    "background_color": "#000a25",
     "display": "standalone",
-    "theme_color": "#1046ff"
+    "theme_color": "#000a25"
 }
