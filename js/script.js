@@ -83,3 +83,9 @@ window.addEventListener("scroll", function(){
      $("nav").addClass("scrolled");
    }
 });
+
+$(".install").hover(function() {
+   $(".material-icons-round").addClass("move-down");
+}, function() {
+   $(".material-icons-round").removeClass("move-down");
+});

@@ -225,7 +225,7 @@ button.coffee {
     width: 175px;
     background: url(https://www.buymeacoffee.com/assets/img/guidelines/download-assets-sm-1.svg);
     background-size: cover;
-    border: solid 2px rgb(53, 53, 53);
+    border: none;
     color: black;
     transition: all 0.3s ease 0.1s;
     
@@ -242,7 +242,7 @@ button.coffee-mobile {
     height: 50px;
     background: url(https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg);
     color: black;
-    border: solid 2px rgb(53, 53, 53);
+    border: none;
     transition: all 0.3s ease 0s;
 }
 
@@ -313,6 +313,15 @@ div.div-line {
     border: solid 5px rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.1);
+}
+
+span.material-icons-round {
+    transition: all 0.3s ease 0s;
+}
+
+span.material-icons-round.move-down {
+    transform: translateY(15%);
+    transition: all 0.3s ease 0s;
 }
 
 span.material-icons {
@@ -411,10 +420,6 @@ footer.footer-bottom {
 @media screen and (max-width: 900px) {
     header.content {
         padding-top: 30%;
-    }
-
-    h1.title {
-        font-size: 18px;
     }
 
     h2.loading-h2 {
