@@ -2,13 +2,13 @@ self.addEventListener("install", function(e){
     e.waitUntil(
         caches.open("gumroad-calculator-v0-1").then(function(cache){
             return cache.addAll([
-		        "/Gumroad-Calculator/",
-                "/Gumroad-Calculator/css/style.css",
-                "/Gumroad-Calculator/js/script.js",
-                "/Gumroad-Calculator/manifest.json",
-                "/Gumroad-Calculator/resources/512.png",
-                "/Gumroad-Calculator/resources/152.png",
-                "/Gumroad-Calculator/resources/jquery.js"
+		        "https://devlbd.github.io/Gumroad-Calculator/",
+                "https://devlbd.github.io/Gumroad-Calculator/css/style.css",
+                "https://devlbd.github.io/Gumroad-Calculator/js/script.js",
+                "https://devlbd.github.io/Gumroad-Calculator/manifest.json",
+                "https://devlbd.github.io/Gumroad-Calculator/resources/512.png",
+                "https://devlbd.github.io/Gumroad-Calculator/resources/152.png",
+                "https://devlbd.github.io/Gumroad-Calculator/js/jquery.js"
             ]);
         })
     );
