@@ -83,23 +83,3 @@ window.addEventListener("scroll", function(){
      $("nav").addClass("scrolled");
    }
 });
-
-// Initialize deferredPrompt for use later to show browser install prompt.
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  $(".install").addClass("active");
-});
-
-$(".install").click(function() {
-   deferredPrompt.prompt();
-})
-
-window.addEventListener('appinstalled', () => {
-   // Hide the app-provided install promotion
-   $(".install").removeClass("active");
-   // Clear the deferredPrompt so it can be garbage collected
-   deferredPrompt = null;
- });
