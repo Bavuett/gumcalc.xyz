@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     </head>
     <body>
         <div class="glass">
@@ -40,10 +41,16 @@
                 <h1 class="title">
                     <a href="https://devlbd.github.io/Gumroad-Calculator/">Gumroad Calculator</a>
                 </h1>
-                <a href="https://www.buymeacoffee.com/DevLBD" target="_blank">
-                    <button class="coffee"></button>
-                    <button class="coffee-mobile"></button>
-                </a>
+                <div class="title-button-group">
+                    <a>
+                        <button class="install"><span class="material-icons-round">file_download</span></button>
+                    </a>
+                    <div class="button-spacing"></div>
+                    <a href="https://www.buymeacoffee.com/DevLBD" target="_blank">
+                        <button class="coffee"></button>
+                        <button class="coffee-mobile"></button>
+                    </a>
+                </div>
             </div>
         </nav>
         <header class="content" id="page-top">
@@ -69,7 +76,7 @@
             </form>
             <div class="div-line"></div>
             <div class="result-section">
-                <h3 class="intro-explanation">Here's what you're going to earn.</h3>
+                <h3 class="intro-explanation">Here's how much you're going to earn.</h3>
                 <p class="explanation">Once you filled the form, the price'll show up here. <span class="price-span">Give it a try!</span></p>
                 <h3 class="price-result closed">$</h3>
             </div>

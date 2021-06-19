@@ -31,11 +31,9 @@ $("button.form-confirm").click(function(){
       $("#discover-type").removeClass("error");
       $(".result-section").addClass("showing-result");
       $(".explanation").addClass("closed");
-      $(".intro-explanation").text("Here's what you're going to earn.");
+      $(".intro-explanation").text("Here's how much you're going to earn.");
       $(".price-result").text("$" + finalPrice);
-      setTimeout(function(){
-         $(".price-result").removeClass("closed");
-      }, 800);
+      $(".price-result").removeClass("closed");
 
    } else {
       $("button.form-confirm").addClass("error");
@@ -63,9 +61,7 @@ $("button.form-confirm").click(function(){
          $("#discover-type").addClass("error");
       }
 
-      setTimeout(function(){
-         $(".price-result").addClass("closed");
-      }, 800);
+      $(".price-result").addClass("closed");
    }
 });
 
@@ -86,4 +82,18 @@ window.addEventListener("scroll", function(){
    } else {
      $("nav").addClass("scrolled");
    }
+});
+
+// Initialize deferredPrompt for use later to show browser install prompt.
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  $(".install").addClass("active");
+  // Optionally, send analytics event that PWA install promo was shown.
+  console.log(`'beforeinstallprompt' event was fired.`);
 });
