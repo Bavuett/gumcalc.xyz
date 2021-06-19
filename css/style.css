@@ -275,6 +275,10 @@ button.menu-button {
     background: black;
 }
 
+div.end-space {
+    padding: 5%;
+}
+
 div.title-button-group {
     display: flex;
     flex-direction: row;
@@ -454,6 +458,10 @@ footer.footer-bottom {
         border-radius: 50px;
     }
 
+    div.end-space {
+        padding: 10%;
+    }
+
     button.first {
         display: none;
     }
@@ -490,3 +498,9 @@ footer.footer-bottom {
         background: rgba(255, 255, 255, 0.05);
     }
 }
+
+@media all and (display-mode: standalone) {
+    button.install.active {
+        display: none;
+    }
+  }
