@@ -7,6 +7,7 @@
         <link rel="preload" href="css/loading.css" as="style">
         <link rel="stylesheet" href="css/loading.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="manifest" href="manifest.json">
         <meta name="theme-color" content="rgb(0, 10, 37)">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.90, user-scalable=no">
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -86,5 +87,12 @@
         <script src="js/jquery.js"></script>
         <script src="js/loading.js"></script>
         <script src="js/script.js"></script>
+        <script>
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/Gumroad-Calculator/sw.js").then(function(){
+                    console.log("Good news!\nService Worker now registered!");
+                });
+            }
+        </script>
     </body>
 </html>

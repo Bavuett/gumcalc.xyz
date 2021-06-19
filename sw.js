@@ -11,7 +11,7 @@ self.addEventListener("install", function(e){
 		        "/Gumroad-Calculator/resources/icon.ico",
                 "/Gumroad-Calculator/resources/512.png",
                 "/Gumroad-Calculator/resources/192.png",
-                "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                "/Gumroad-Calculator/resources/jquery.js"
             ]);
         })
     );

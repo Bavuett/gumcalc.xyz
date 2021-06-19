@@ -5,9 +5,9 @@
     "description": "This apps helps you calculate how much you earned from your Gumroad Products.",
     "icons": [
         {
-            "src": "/Gumroad-Calculator/resources/192.png",
+            "src": "/Gumroad-Calculator/resources/152.png",
             "type": "image/png",
-            "sizes": "192x192",
+            "sizes": "152x152",
             "purpose": "maskable any"
         },
         {
@@ -21,6 +21,6 @@
     "start_url": "/Gumroad-Calculator/",
     "orientation": "portrait",
     "background_color": "#1046ff",
-    "display": "minimal-ui",
+    "display": "standalone",
     "theme_color": "#1046ff"
 }
