@@ -2,9 +2,11 @@
 let deferredPrompt;
 
 window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  $(".install").addClass("active");
+  if (window.matchMedia("(min-width: 900px)") == true) {
+    e.preventDefault();
+    deferredPrompt = e;
+    $(".install").addClass("active");
+  }
 });
 
 $(".install").click(function() {
