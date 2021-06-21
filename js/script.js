@@ -26,8 +26,9 @@ $("button.form-confirm").click(function() {
    var price = document.getElementById("price").value;
    var isAccountCreator = document.getElementById("account-type").value;
    var isPurchaseByDiscover = document.getElementById("discover-type").value;
+   var isValidSale = document.getElementById("sale-type").value;
 
-   if (price >= 1 && isAccountCreator != 'dont-know-account' && isPurchaseByDiscover != 'dont-know-discover') {
+   if (price >= 1 && isAccountCreator != 'dont-know-account' && isPurchaseByDiscover != 'dont-know-discover' && isValidSale != 'dont-know-sale') {
       isEverythingCorrect = 1;
       console.log("Everything is Correct: " + isEverythingCorrect);
 
@@ -51,6 +52,7 @@ $("button.form-confirm").click(function() {
       $("#price").removeClass("error");
       $("#account-type").removeClass("error");
       $("#discover-type").removeClass("error");
+      $("#sale-type").removeClass("error");
       $(".average-section").addClass("showing-result");
       $(".explanation").addClass("closed");
       $("#intro-explanation").text("Here's how much you're going to earn.");
@@ -60,15 +62,18 @@ $("button.form-confirm").click(function() {
       $("#result-details").removeClass("closed");
       $("#result-details").text("Gumroad will apply a fee of " + percentage + "% from the original price ($" + price + ") and will then subtract $0.30.");
 
-      var finalTotal = Number(Number(finalPrice) + previousTotal);
-      var finalTotal = finalTotal.toFixed(2);
-      localStorage.setItem("all-total", finalTotal);
-      localStorage.setItem("times-used", timesUsed);
-      var medium = Number(localStorage.getItem("all-total")) / timesUsed;
-      medium = medium.toFixed(2);
-      $("#average-price").text("$" + medium);
-      $("#average-details").removeClass("closed");
-      $("#average-details").text("Based on previous data, you made a total of $" + Number(localStorage.getItem("all-total")) + " with " + timesUsed + " purchases.");
+      if (isValidSale == 'sale') {
+         var finalTotal = Number(Number(finalPrice) + previousTotal);
+         var finalTotal = finalTotal.toFixed(2);
+         localStorage.setItem("all-total", finalTotal);
+         localStorage.setItem("times-used", timesUsed);
+         var medium = Number(localStorage.getItem("all-total")) / timesUsed;
+         medium = medium.toFixed(2);
+         $("#average-price").text("$" + medium);
+         $("#average-details").removeClass("closed");
+         $("#average-details").text("Based on previous data, you made a total of $" + Number(localStorage.getItem("all-total")) + " with " + timesUsed + " purchases.");
+      } else {
+      }
 
    } else {
       $("button.form-confirm").addClass("error");
@@ -96,6 +101,10 @@ $("button.form-confirm").click(function() {
       
       if (isPurchaseByDiscover == 'dont-know-discover') {
          $("#discover-type").addClass("error");
+      }
+
+      if (isValidSale == 'dont-know-sale') {
+         $("#sale-type").addClass("error");
       }
 
       $("#price-result").addClass("closed");

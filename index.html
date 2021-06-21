@@ -82,9 +82,15 @@
                     <option value="not-discover">No, my customer isn't coming from Discover</option>
                 </select>
                 <div class="form-space"></div>
-                <button type="button" class="form-confirm">Calculate</button>
+                <select id="sale-type" name="sale-type" class="account-type-selector">
+                    <option value="dont-know-sale" id="notvalid">Did you sell the product?</option>
+                    <option value="sale">I did (Will count in total and average sales)</option>
+                    <option value="not-sale">I didn't (Won't count in total and average sales)</option>
+                </select>
             </form>
-            <div class="div-line"></div>
+            <button type="button" class="form-confirm">Calculate</button>
+            <div class="form-space"></div>
+            <div class="form-space"></div>
             <div class="result-container">
                 <div class="result-section">
                     <h3 class="intro-explanation" id="intro-explanation">Here's how much you're going to earn.</h3>
