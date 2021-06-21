@@ -17,6 +17,23 @@
             "purpose": "maskable any"
         }
     ],
+    "screenshots" : [
+        {
+          "src": "1.jpg",
+          "sizes": "1366x768",
+          "type": "image/jpg"
+        },
+        {
+            "src": "2.jpg",
+            "sizes": "1366x768",
+            "type": "image/jpg"
+          },
+        {
+          "src": "3.jpg",
+          "sizes": "1366x768",
+          "type": "image/jpg"
+        }
+    ],
     "scope": "https://devlbd.github.io/Gumroad-Calculator/",	
     "start_url": "https://devlbd.github.io/Gumroad-Calculator/",
     "orientation": "portrait",
