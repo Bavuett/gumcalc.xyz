@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title> Gumroad Calculator by @DevLBD. </title>
+        <title> Gumroad Calculator. </title>
         <link rel="preload" href="js/jquery.js" as="script">
         <link rel="preload" href="js/loading.js" as="script">
         <link rel="preload" href="css/loading.css" as="style">
@@ -9,13 +9,19 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="manifest" href="manifest.json">
         <link rel="icon" href="resources/icon.ico">
+        <meta name="twitter:card" content="summary"></meta>
+        <meta name="twitter:title" content="Gumroad Calculator by Lorenzo Barretta.">
+        <meta name="twitter:creator" content="@DevLBD">
+        <meta name="twitter:description" content="Calculate how much you are going to earn from your Gumroad Sales.">
+        <meta property="twitter:image" content="https://devlbd.github.io/resources/512.png">
         <meta name="theme-color" content="rgb(0, 10, 37)">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=0.90, user-scalable=no">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&amp;display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="glass">
@@ -77,10 +83,20 @@
                 <button type="button" class="form-confirm">Calculate</button>
             </form>
             <div class="div-line"></div>
-            <div class="result-section">
-                <h3 class="intro-explanation">Here's how much you're going to earn.</h3>
-                <p class="explanation">Once you filled the form, the price'll show up here. <span class="price-span">Give it a try!</span></p>
-                <h3 class="price-result closed">$</h3>
+            <div class="result-container">
+                <div class="result-section">
+                    <h3 class="intro-explanation" id="intro-explanation">Here's how much you're going to earn.</h3>
+                    <p class="explanation" id="explanation">Once you filled the form, the amount of money you are going to earn from your product will show up here.</p>
+                    <h3 class="price-result closed" id="price-result">$</h3>
+                    <h4 class="details closed" id="result-details">Gumroad will apply a 10% fee to the original price, minus $0.30.</h4>
+                </div>
+                <div class="results-space"></div>
+                <div class="average-section">
+                    <h3>Here's what you earn in average.</h3>
+                    <p class="explanation" id="average-p">Once you will use the app at least once, the average amount of money you earned from all your sales will show up here.</p>
+                    <h3 class="price-result closed" id="average-price">$</h3>
+                    <h4 class="details closed" id="average-details">With a total of $3.00 made in 4 purchases.</h4>
+                </div>
             </div>
             <div class="end-space"></div>
         </header>
@@ -91,7 +107,7 @@
                 <p class="footer">Gumroad is a trademark of Gumroad, Inc.</p>
             </div>
             <div class="scroll">
-                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a></p>
+                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a> <br> <a onclick="clearData()">Remove my Contents <span class="material-icons-outlined trash">delete</span></a></p>            
             </div>
         </footer>
         <script src="js/jquery.js"></script>
