@@ -20,7 +20,7 @@ window.addEventListener("load", function() {
    }
 });
 
-$("button.form-confirm").click(function() {
+$("button#form-confirm").click(function() {
    var timesUsed = Number(localStorage.getItem("times-used"));
    var previousTotal = Number(localStorage.getItem("all-total"));
    var price = document.getElementById("price").value;
@@ -76,9 +76,9 @@ $("button.form-confirm").click(function() {
       }
 
    } else {
-      $("button.form-confirm").addClass("error");
+      $("button#form-confirm").addClass("error");
       setTimeout(function(){
-         $("button.form-confirm").removeClass("error");
+         $("button#form-confirm").removeClass("error");
       }, 1500);
 
       console.log("Something is Wrong: " + isEverythingCorrect);

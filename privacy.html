@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title> Gumroad Calculator. </title>
+        <title> Privacy. </title>
         <link rel="preload" href="js/jquery.js" as="script">
         <link rel="preload" href="js/loading.js" as="script">
         <link rel="preload" href="css/loading.css" as="style">
@@ -64,48 +64,16 @@
             </div>
         </nav>
         <header class="content" id="page-top">
-            <h3>How much are you going to earn from your product?</h3>
-            <p>Inside the box, type the amount your customer is going to pay for the product. <br> Fill the boxes as needed. <span class="price-span">The price must be higher than $1.</span></p>
-            <form>
-                <input type="number" id="price" name="price" class="price-input" min="1" placeholder="How much is your customer going to pay?" autocomplete="off"> 
-                <div class="form-space"></div>
-                <select id="account-type" name="account-type" class="account-type-selector">
-                    <option value="dont-know-account" id="notvalid">Which kind of account have you got?</option>
-                    <option value="classic">Classic Account (Free)</option>
-                    <option value="creator">Creator Account (Paid)</option>
-                </select>
-            </form>
-            <form id="second">
-                <select id="discover-type" name="discover-type" class="account-type-selector">
-                    <option value="dont-know-discover" id="notvalid">Is your customer coming from Discover?</option>
-                    <option value="discover">Yes, my customer is coming from Discover</option>
-                    <option value="not-discover">No, my customer isn't coming from Discover</option>
-                </select>
-                <div class="form-space"></div>
-                <select id="sale-type" name="sale-type" class="account-type-selector">
-                    <option value="dont-know-sale" id="notvalid">Did you sell the product?</option>
-                    <option value="sale">I did (Will count in total and average sales)</option>
-                    <option value="not-sale">I didn't (Won't count in total and average sales)</option>
-                </select>
-            </form>
-            <button type="button" class="form-confirm" id="form-confirm">Calculate</button>
-            <div class="form-space"></div>
-            <div class="form-space"></div>
-            <div class="result-container">
-                <div class="result-section">
-                    <h3 class="intro-explanation" id="intro-explanation">Here's how much you're going to earn.</h3>
-                    <p class="explanation" id="explanation">Once you filled the form, the amount of money you are going to earn from your product will show up here.</p>
-                    <h3 class="price-result closed" id="price-result">$</h3>
-                    <h4 class="details closed" id="result-details">Gumroad will apply a 10% fee to the original price, minus $0.30.</h4>
-                </div>
-                <div class="results-space"></div>
-                <div class="average-section">
-                    <h3>Here's how much you earn in average.</h3>
-                    <p class="explanation" id="average-p">Once you will use the app at least once, the average amount of money you earned from all your sales will show up here.</p>
-                    <h3 class="price-result closed" id="average-price">$</h3>
-                    <h4 class="details closed" id="average-details">With a total of $3.00 made in 4 purchases.</h4>
-                </div>
+            <div class="privacy-section">
+                <h3>Privacy Policy.</h3>
+                <p>Privacy is a human right that everyone should respect, and that's why this website does not use any type of cookie and in no way tracks the activities of its users.</p>
+                <br>
+                <p>The data you have entered in the app are automatically saved <span class="price-span">locally</span> in your device when you tell the app you sold the product, but those data <span class="price-span">are never sent</span> to a server.</p>
+                <br>
+                <p>If you wish to delete any data you entered on the app, you can do so by clicking <span class="price-span">Remove my Contents"</span> at the bottom. </p>
             </div>
+            <div class="form-space"></div>
+            <button type="button" class="form-confirm" onclick="window.location.href = 'https://devlbd.github.io/Gumroad-Calculator'">Go Back</button>
             <div class="end-space"></div>
         </header>
         <footer class="footer-bottom">
@@ -115,7 +83,7 @@
                 <p class="footer">Gumroad is a trademark of Gumroad, Inc.</p>
             </div>
             <div class="scroll">
-                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a> <br> <a onclick="clearData()">Remove my Contents <span class="material-icons-outlined trash">delete</span></a><br> <a href="https://devlbd.github.io/Gumroad-Calculator/privacy">About my Privacy <span class="material-icons-outlined trash">policy</span></a></p>            
+                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a> <br> <a onclick="clearData()">Remove my Contents <span class="material-icons-outlined trash">delete</span></a><br> <a href="https://devlbd.github.io/Gumroad-Calculator/privacy">About my Privacy <span class="material-icons-outlined trash">policy</span></a></p>             
             </div>
         </footer>
         <script src="js/jquery.js"></script>
