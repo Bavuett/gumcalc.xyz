@@ -1,6 +1,6 @@
 self.addEventListener("install", function(e){
     e.waitUntil(
-        caches.open("gumroad-calculator-v2-1").then(function(cache){
+        caches.open("gumroad-calculator-v2-2").then(function(cache){
             return cache.addAll([
 		        "https://devlbd.github.io/Gumroad-Calculator/",
                 "https://devlbd.github.io/Gumroad-Calculator/css/style.css",
@@ -24,7 +24,7 @@ self.addEventListener("fetch", function(event){
 });
 
 self.addEventListener("activate", function(event){
-    var cacheWhiteList = ["gumroad-calculator-v2-1", "mytasks-v8-0-2"];
+    var cacheWhiteList = ["gumroad-calculator-v2-2", "mytasks-v8-0-2"];
     
     event.waitUntil(
         caches.keys().then(function(cacheNames){
