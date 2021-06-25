@@ -1,9 +1,9 @@
 self.addEventListener("install", function(e){
     e.waitUntil(
-        caches.open("gumroad-calculator-v2-5").then(function(cache){
+        caches.open("gumroad-calculator-v2-6").then(function(cache){
             return cache.addAll([
 		        "https://devlbd.github.io/Gumroad-Calculator/",
-		    	"https://devlbd.github.io/Gumroad-Calculator/?app-install-source=microsoft-store"
+		    	"https://devlbd.github.io/Gumroad-Calculator/?app-install-source=microsoft-store",
                 	"https://devlbd.github.io/Gumroad-Calculator/css/style.css",
 			"https://devlbd.github.io/Gumroad-Calculator/css/loading.css",
                 	"https://devlbd.github.io/Gumroad-Calculator/js/script.js",
@@ -27,7 +27,7 @@ self.addEventListener("fetch", function(event){
 });
 
 self.addEventListener("activate", function(event){
-    var cacheWhiteList = ["gumroad-calculator-v2-5", "mytasks-v8-0-2"];
+    var cacheWhiteList = ["gumroad-calculator-v2-6", "mytasks-v8-0-2"];
     
     event.waitUntil(
         caches.keys().then(function(cacheNames){
