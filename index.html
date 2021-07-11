@@ -26,7 +26,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="glass">
+        <div class="glass" id="loading-window">
             <div class="text-loading">
                 <h2 align="center" class="loading-h2">Gumroad Calculator</h2>
                 <p align="center" class="loading-p">Created by Lorenzo Barretta.</p>
@@ -42,6 +42,19 @@
                     <button class="offline reload">Reload</button>
                     <div class="buttons-space"></div>
                     <button class="offline continue">Continue Anywas</button>
+                </div>
+            </div>
+        </div>
+        <div class="glass closed" id="update-window">
+            <div class="text-loading" id="text-install">
+                <h2 align="center" class="install-h2">An update is ready to install.</h2>
+                <div class="buttons-space"></div>
+                <p align="center" class="install-p">A new update for Gumroad Calculator has finished downloading, and is waiting to be installed. <br>  <br> Would you like to install it now? <br> <span class="price-span"> This will only take a few seconds. </span> </p>
+                <div class="install-space"></div>
+                <div class="install-buttons">
+                    <button class="offline install">Install Now</button>
+                    <div class="buttons-space"></div>
+                    <button class="offline later">Do It Later</button>
                 </div>
             </div>
         </div>

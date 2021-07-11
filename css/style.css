@@ -99,6 +99,10 @@ h2 {
     font-weight: 800;
 }
 
+h2.install-h2 {
+    font-size: 24px;
+}
+
 h3 {
     font-size: 19px;
     margin-block-start: 0.67em;
@@ -297,6 +301,19 @@ button.menu-button {
     background: black;
 }
 
+div.install-space {
+    padding: 3%;
+}
+
+div.install-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+div#text-install {
+    width: 62%;
+}
+
 div.end-space {
     padding: 5%;
 }
@@ -473,6 +490,11 @@ footer.footer-bottom {
         font-size: 28px;
     }
 
+    h2.install-h2 {
+        font-size: 20px;
+        margin-bottom: 3.5%;
+    }
+
     button.coffee-mobile {
         display: block;
     }
@@ -503,6 +525,15 @@ footer.footer-bottom {
 
     p.explanation.closed {
         margin-top: -17%;
+    }
+
+    div.install-buttons {
+        display: flex;
+        flex-direction: column;
+    }
+
+    div#text-install {
+        width: 100%;
     }
 
     div.privacy-section {

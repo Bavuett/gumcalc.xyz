@@ -72,7 +72,6 @@ $("button#form-confirm").click(function() {
          $("#average-price").text("$" + medium);
          $("#average-details").removeClass("closed");
          $("#average-details").text("Based on previous data, you made a total of $" + Number(localStorage.getItem("all-total")) + " with " + timesUsed + " purchases.");
-      } else {
       }
 
    } else {
