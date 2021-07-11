@@ -139,7 +139,7 @@
             function invokeServiceWorkerUpdateFlow(registration) {
                 setTimeout(function(){
                     $("#update-window").removeClass("closed");
-                }, 12000);
+                }, 5000);
                 $(".install-update").click(function() {
                 if (registration.waiting) {
                     registration.waiting.postMessage('SKIP_WAITING');
