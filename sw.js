@@ -1,17 +1,17 @@
 self.addEventListener("install", function(e){
     e.waitUntil(
-        caches.open("gumroad-calculator-v2-7").then(function(cache){
+        caches.open("gumroad-calculator-v2-6").then(function(cache){
             return cache.addAll([
 		        "https://devlbd.github.io/Gumroad-Calculator/",
 		    	"https://devlbd.github.io/Gumroad-Calculator/?app-install-source=microsoft-store",
-                	"https://devlbd.github.io/Gumroad-Calculator/css/style.css",
-			"https://devlbd.github.io/Gumroad-Calculator/css/loading.css",
-                	"https://devlbd.github.io/Gumroad-Calculator/js/script.js",
+                "https://devlbd.github.io/Gumroad-Calculator/css/style.css",
+			    "https://devlbd.github.io/Gumroad-Calculator/css/loading.css",
+                "https://devlbd.github.io/Gumroad-Calculator/js/script.js",
 		    	"https://devlbd.github.io/Gumroad-Calculator/js/loading.js",
-                	"https://devlbd.github.io/Gumroad-Calculator/manifest.json",
-                	"https://devlbd.github.io/Gumroad-Calculator/resources/512.png",
-                	"https://devlbd.github.io/Gumroad-Calculator/resources/152.png",
-                	"https://devlbd.github.io/Gumroad-Calculator/js/jquery.js"
+                "https://devlbd.github.io/Gumroad-Calculator/manifest.json",
+                "https://devlbd.github.io/Gumroad-Calculator/resources/512.png",
+                "https://devlbd.github.io/Gumroad-Calculator/resources/152.png",
+                "https://devlbd.github.io/Gumroad-Calculator/js/jquery.js"
             ]);
         })
     );
@@ -27,7 +27,7 @@ self.addEventListener("fetch", function(event){
 });
 
 self.addEventListener("activate", function(event){
-    var cacheWhiteList = ["gumroad-calculator-v2-7", "mytasks-v8-0-2"];
+    var cacheWhiteList = ["gumroad-calculator-v2-6", "mytasks-v8-0-2"];
     
     event.waitUntil(
         caches.keys().then(function(cacheNames){
