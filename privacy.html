@@ -26,7 +26,7 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="glass">
+        <div class="glass" id="loading-window">
             <div class="text-loading">
                 <h2 align="center" class="loading-h2">Gumroad Calculator</h2>
                 <p align="center" class="loading-p">Created by Lorenzo Barretta.</p>
@@ -42,6 +42,19 @@
                     <button class="offline reload">Reload</button>
                     <div class="buttons-space"></div>
                     <button class="offline continue">Continue Anywas</button>
+                </div>
+            </div>
+        </div>
+        <div class="glass closed" id="update-window">
+            <div class="text-loading" id="text-install">
+                <h2 align="center" class="install-h2">An update is ready to install.</h2>
+                <div class="buttons-space"></div>
+                <p align="center" class="install-p">A new update for Gumroad Calculator has been released, and is waiting to be installed. <br>  <br> Would you like to install it now? <br> <span class="price-span"> This will only take a few seconds. </span> </p>
+                <div class="install-space"></div>
+                <div class="install-buttons">
+                    <button class="offline install-update">Install Now</button>
+                    <div class="buttons-space"></div>
+                    <button class="offline later">Do It Later</button>
                 </div>
             </div>
         </div>
@@ -91,11 +104,50 @@
         <script src="js/script.js"></script>
         <script src="js/install.js"></script>
         <script>
-            if ("serviceWorker" in navigator) {
-                navigator.serviceWorker.register("https://devlbd.github.io/Gumroad-Calculator/sw.js").then(function(){
-                    console.log("Good news!\nService Worker now registered!");
-                });
+            function invokeServiceWorkerUpdateFlow(registration) {
+                setTimeout(function(){
+                    $("#update-window").removeClass("closed");
+                }, 3500);
+                $(".install-update").click(function() {
+                if (registration.waiting) {
+                    registration.waiting.postMessage('SKIP_WAITING');
+                }
+            });
+                $(".later").click(function() {
+                    $("#update-window").addClass("closed");
+                }) 
+            };
+
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', async () => {
+                const registration = await navigator.serviceWorker.register('https://devlbd.github.io/Gumroad-Calculator/sw.js');
+                if (registration.waiting) {
+                    invokeServiceWorkerUpdateFlow(registration);
+                }
+                registration.addEventListener('updatefound', () => {
+                    if (registration.installing) {
+                    registration.installing.addEventListener('statechange', () => {
+                        if (registration.waiting) {
+                            if (navigator.serviceWorker.controller) {
+                                invokeServiceWorkerUpdateFlow(registration);
+                        } else {
+                            console.log('Service Worker initialized for the first time');
+                        }
+                    }
+                })
             }
+            });
+
+            let refreshing = false;
+
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                    if (!refreshing) {
+                        window.location.reload()
+                        refreshing = true
+                    }
+                })
+            })
+        }
         </script>
     </body>
 </html>
