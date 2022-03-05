@@ -5,13 +5,13 @@
     "description": "This apps helps you calculate how much you earned from your Gumroad Products.",
     "icons": [
         {
-            "src": "https://devlbd.github.io/Gumroad-Calculator/resources/152.png",
+            "src": "https://gumcalc.xyz/resources/152.png",
             "type": "image/png",
             "sizes": "152x152",
             "purpose": "maskable any"
         },
         {
-            "src": "https://devlbd.github.io/Gumroad-Calculator/resources/512.png",
+            "src": "https://gumcalc.xyz/resources/512.png",
             "type": "image/png",
             "sizes": "512x512",
             "purpose": "maskable any"
@@ -19,23 +19,23 @@
     ],
     "screenshots" : [
         {
-          "src": "https://devlbd.github.io/Gumroad-Calculator/resources/1.jpg",
+          "src": "https://gumcalc.xyz/resources/1.jpg",
           "sizes": "1366x768",
           "type": "image/jpg"
         },
         {
-            "src": "https://devlbd.github.io/Gumroad-Calculator/resources/2.jpg",
+            "src": "https://gumcalc.xyz/resources/2.jpg",
             "sizes": "1366x768",
             "type": "image/jpg"
           },
         {
-          "src": "https://devlbd.github.io/Gumroad-Calculator/resources/3.jpg",
+          "src": "https://gumcalc.xyz/resources/3.jpg",
           "sizes": "1366x768",
           "type": "image/jpg"
         }
     ],
-    "scope": "https://devlbd.github.io/Gumroad-Calculator/",	
-    "start_url": "https://devlbd.github.io/Gumroad-Calculator/",
+    "scope": "https://gumcalc.xyz/",	
+    "start_url": "https://gumcalc.xyz/",
     "orientation": "portrait",
     "background_color": "#000a25",
     "display": "standalone",

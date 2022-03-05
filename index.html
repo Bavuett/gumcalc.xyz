@@ -69,7 +69,7 @@
         <nav class="main">
             <div class="title-nav">
                 <h1 class="title">
-                    <a href="https://devlbd.github.io/Gumroad-Calculator/">Gumroad Calculator</a>
+                    <a href="https://gumcalc.xyz/">Gumroad Calculator</a>
                 </h1>
                 <div class="button-spacing"></div>
                 <div class="title-button-group">
@@ -136,7 +136,7 @@
                 <p class="footer">Gumroad is a trademark of Gumroad, Inc.</p>
             </div>
             <div class="scroll">
-                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a> <br> <a onclick="clearData()">Remove my Contents <span class="material-icons-outlined trash">delete</span></a><br> <a href="https://devlbd.github.io/Gumroad-Calculator/privacy">About my Privacy <span class="material-icons-outlined trash">policy</span></a></p>            
+                <p class="footer"><a href="#page-top" class="back-to-top">Back to Top&nbsp;<span class="material-icons north">north</span></a> <br> <a onclick="clearData()">Remove my Contents <span class="material-icons-outlined trash">delete</span></a><br> <a href="https://gumcalc.xyz/privacy">About my Privacy <span class="material-icons-outlined trash">policy</span></a></p>            
             </div>
         </footer>
         <script src="js/jquery.js"></script>
@@ -160,7 +160,7 @@
 
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', async () => {
-                const registration = await navigator.serviceWorker.register('https://devlbd.github.io/Gumroad-Calculator/sw.js');
+                const registration = await navigator.serviceWorker.register('https://gumcalc.xyz/sw.js');
                 if (registration.waiting) {
                     invokeServiceWorkerUpdateFlow(registration);
                 }

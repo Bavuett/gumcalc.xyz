@@ -2,16 +2,16 @@ self.addEventListener("install", function(e){
     e.waitUntil(
         caches.open("gumroad-calculator-v2-9-3").then(function(cache){
             return cache.addAll([
-		        "https://devlbd.github.io/Gumroad-Calculator/",
-		    	"https://devlbd.github.io/Gumroad-Calculator/?app-install-source=microsoft-store",
-                "https://devlbd.github.io/Gumroad-Calculator/css/style.css",
-			    "https://devlbd.github.io/Gumroad-Calculator/css/loading.css",
-                "https://devlbd.github.io/Gumroad-Calculator/js/script.js",
-		    	"https://devlbd.github.io/Gumroad-Calculator/js/loading.js",
-                "https://devlbd.github.io/Gumroad-Calculator/manifest.json",
-                "https://devlbd.github.io/Gumroad-Calculator/resources/512.png",
-                "https://devlbd.github.io/Gumroad-Calculator/resources/152.png",
-                "https://devlbd.github.io/Gumroad-Calculator/js/jquery.js"
+		        "https://gumcalc.xyz/",
+		    	"https://gumcalc.xyz/?app-install-source=microsoft-store",
+                "https://gumcalc.xyz/css/style.css",
+			    "https://gumcalc.xyz/css/loading.css",
+                "https://gumcalc.xyz/js/script.js",
+		    	"https://gumcalc.xyz/js/loading.js",
+                "https://gumcalc.xyz/manifest.json",
+                "https://gumcalc.xyz/resources/512.png",
+                "https://gumcalc.xyz/resources/152.png",
+                "https://gumcalc.xyz/js/jquery.js"
             ]);
         })
     );
