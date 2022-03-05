@@ -36,6 +36,7 @@
     ],
     "scope": "https://gumcalc.xyz/",	
     "start_url": "https://gumcalc.xyz/",
+    "id": "/",
     "orientation": "portrait",
     "background_color": "#000a25",
     "display": "standalone",

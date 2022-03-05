@@ -1,6 +1,6 @@
 self.addEventListener("install", function(e){
     e.waitUntil(
-        caches.open("gumroad-calculator-v2-9-3").then(function(cache){
+        caches.open("gumroad-calculator-v2-9-4").then(function(cache){
             return cache.addAll([
 		        "https://gumcalc.xyz/",
 		    	"https://gumcalc.xyz/?app-install-source=microsoft-store",
@@ -27,7 +27,7 @@ self.addEventListener("fetch", function(event){
 });
 
 self.addEventListener("activate", function(event){
-    var cacheWhiteList = ["gumroad-calculator-v2-9-3", "mytasks-v8-0-2"];
+    var cacheWhiteList = ["gumroad-calculator-v2-9-4"];
     
     event.waitUntil(
         caches.keys().then(function(cacheNames){
