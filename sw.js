@@ -1,6 +1,6 @@
 self.addEventListener("install", function(e){
     e.waitUntil(
-        caches.open("gumroad-calculator-v2-9-4").then(function(cache){
+        caches.open("gumroad-calculator-v2-9-5").then(function(cache){
             return cache.addAll([
 		        "https://gumcalc.xyz/",
 		    	"https://gumcalc.xyz/?app-install-source=microsoft-store",
@@ -11,7 +11,11 @@ self.addEventListener("install", function(e){
                 "https://gumcalc.xyz/manifest.json",
                 "https://gumcalc.xyz/resources/512.png",
                 "https://gumcalc.xyz/resources/152.png",
-                "https://gumcalc.xyz/js/jquery.js"
+                "https://gumcalc.xyz/js/jquery.js",
+                "https://gumcalc.xyz/resources/3.jpg",
+                "https://gumcalc.xyz/resources/2.jpg",
+                "https://gumcalc.xyz/resources/1.jpg",
+                "https://gumcalc.xyz/resources/icon.ico"
             ]);
         })
     );
@@ -27,7 +31,7 @@ self.addEventListener("fetch", function(event){
 });
 
 self.addEventListener("activate", function(event){
-    var cacheWhiteList = ["gumroad-calculator-v2-9-4"];
+    var cacheWhiteList = ["gumroad-calculator-v2-9-5"];
     
     event.waitUntil(
         caches.keys().then(function(cacheNames){
