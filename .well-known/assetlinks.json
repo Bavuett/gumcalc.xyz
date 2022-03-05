@@ -1,5 +1,6 @@
 [{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target" : { "namespace": "android_app", "package_name": "io.github.devlbd.twa",
-                   "sha256_cert_fingerprints": ["5D:AC:FA:35:72:BE:4A:69:CC:F4:FA:B3:C3:16:3B:C7:FE:B9:B7:70:7F:F7:87:1A:62:91:B8:29:B2:86:81:89"] }
-    }]
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target" : { "namespace": "android_app", "package_name": "xyz.devlbd.gumcalc",
+                     "sha256_cert_fingerprints": ["F6:89:77:97:45:5E:81:CE:E4:A9:E0:37:F9:9B:9F:08:0A:2C:8B:EE:81:2E:4A:D1:EB:AF:CA:30:70:E9:D2:E3"] }
+      }
+]
