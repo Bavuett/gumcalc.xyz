@@ -1,6 +1,6 @@
 [{
         "relation": ["delegate_permission/common.handle_all_urls"],
         "target" : { "namespace": "android_app", "package_name": "xyz.devlbd.gumcalc",
-                     "sha256_cert_fingerprints": ["F6:89:77:97:45:5E:81:CE:E4:A9:E0:37:F9:9B:9F:08:0A:2C:8B:EE:81:2E:4A:D1:EB:AF:CA:30:70:E9:D2:E3"] }
+                     "sha256_cert_fingerprints": ["11:02:B8:87:CA:F4:C6:AB:EB:30:03:C0:4C:B3:5A:39:DB:0A:95:B2:88:75:8E:48:CD:2F:96:2F:7D:CF:58:1D"] }
       }
 ]
