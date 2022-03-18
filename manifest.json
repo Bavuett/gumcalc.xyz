@@ -40,5 +40,12 @@
     "orientation": "portrait",
     "background_color": "#000a25",
     "display": "standalone",
-    "theme_color": "#000a25"
+    "theme_color": "#000a25",
+    "preferer_related_applications": true,
+    "related_applications": [
+        {
+            "platform": "play",
+            "url": "https://play.google.com/store/apps/details?id=xyz.devlbd.gumcalc"
+        }
+    ]
 }
