@@ -3,6 +3,7 @@
     "short_name": "Gumroad Calculator",
     "lang": "en",
     "description": "This apps helps you calculate how much you earned from your Gumroad Products.",
+    "categories": ["finance"],
     "icons": [
         {
             "src": "https://gumcalc.xyz/resources/152.png",
@@ -41,6 +42,7 @@
     "background_color": "#000a25",
     "display": "standalone",
     "theme_color": "#000a25",
+    "iarc_rating_id": "e0659a85-42a6-4bbc-897a-cb1473f0702b",
     "preferer_related_applications": true,
     "related_applications": [
         {
